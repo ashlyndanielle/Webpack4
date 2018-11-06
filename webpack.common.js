@@ -21,21 +21,6 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
-        // these are processed in reverse order
-        // styleLoader(cssLoader(sassLoader('source')))
-        use: [{
-          // outputs css into a <style> tag
-          loader: 'style-loader'
-        }, {
-          // parses css into javascript and resolves dependencies
-          loader: 'css-loader'
-        }, {
-          // transforms sass into css
-          loader: 'sass-loader'
-        }]
-      },
-      {
         test: /\.(png|svg|jpg|gif|jpeg)$/,
         use: [
           {
